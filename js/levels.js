@@ -1,11 +1,11 @@
 var levels = [
   {
-    helpTitle : "Select elements by their type",
-    selectorName : "Type Selector",
-    doThis : "Select the plates",
+    helpTitle : "Sélectionner les éléments par leur type",
+    selectorName : "Sélecteur de type",
+    doThis : "Sélectionner les assiettes",
     selector : "plate",
     syntax : "A",
-    help : "Selects all elements of type <strong>A</strong>. Type refers to the type of tag, so <tag>div</tag>, <tag>p</tag> and <tag>ul</tag> are all different element types.",
+    help : "Sélectionne tous les éléments du type <strong>A</strong>. Le type fait référence au type de la balise, donc <tag>div</tag>, <tag>p</tag> et <tag>ul</tag> sont trois types d'éléments différents.",
     examples : [
       '<strong>div</strong> selects all <tag>div</tag> elements.',
       '<strong>p</strong> selects all <tag>p</tag> elements.',
