@@ -201,7 +201,7 @@ var levels = [
 
   // 9
   {
-    doThis : "Sélectionnes tout !",
+    doThis : "Sélectionne tout !",
     selector : "*",
     selectorName:  "Le sélecteur universel",
     helpTitle: "Il permet de tout sélectionner !",
@@ -223,16 +223,16 @@ var levels = [
     `
   },
 
-  
+  // 10
   {
-    doThis : "Select everything on a assiette",
+    doThis : "Sélectionne tous les éléments dans une assiette",
     selector : "assiette *",
     syntax : "A&nbsp;&nbsp;*",
-    helpTitle: "Combine the Universal Selector",
-    help : 'This sélectionne tous éléments inside of <strong>A</strong>.',
+    helpTitle: "Utiliser une combinaison avec le sélecteur universel",
+    help : 'Sélectionne tous les éléments à l\'intérieur d\'un <strong>A</strong>.',
     examples : [
-      '<strong>p *</strong> selects every element inside all <tag>p</tag> éléments.',
-      '<strong>ul.coloree *</strong> selects every element inside all <tag>ul class="coloree"</tag> éléments.'
+      '<strong>p *</strong> sélectionne tous les éléments qui sont à l\'intérieur des éléments <tag>p</tag>.',
+      '<strong>ul.coloree *</strong> sélectionne tous les éléments qui sont à l\'intérieur des éléments <tag>ul class="coloree"</tag>.'
     ],
     boardMarkup: `
     <assiette id="coloree">
@@ -246,16 +246,17 @@ var levels = [
       <pomme/>
     </assiette>`
   },
+  // 11
   {
-    doThis : "Select every pomme that's next to a assiette",
+    doThis : "Sélectionne toutes les pommes à côté d'une assiette",
     selector : "assiette + pomme",
-    helpTitle: "Select an element that directly follows another element",
-    selectorName: "Adjacent Sibling Selector",
+    helpTitle: "Sélectionne les éléments qui suivent immédiatement un autre élément",
+    selectorName: "Sélecteur de voisin direct",
     syntax : "A + B",
-    help : "This sélectionne tous <strong>B</strong> éléments that directly follow <strong>A</strong>. éléments that follow one another are called siblings. They're on the same level, or depth. <br/><br/>In the HTML markup for this level, éléments that have the same indentation are siblings.",
+    help : "Sélectionne tous les éléments <strong>B</strong> qui suivent immédiatement <strong>A</strong>. les éléments qui se suivent sont appelés éléments frères. Ils sont au même niveau, ou à la même profondeur. <br/><br/>In the HTML markup for this level, éléments that have the same indentation are siblings.",
     examples : [
-      '<strong>p + .intro</strong> selects every element with <strong>class="intro"</strong> that directly follows a <tag>p</tag>',
-      '<strong>div + a</strong> selects every <tag>a</tag> element that directly follows a <tag>div</tag>'
+      '<strong>p + .intro</strong> sélectionne tous les éléments avec <strong>class="intro"</strong> qui suivent directement un <tag>p</tag>',
+      '<strong>div + a</strong> sélectionne tous les éléments <tag>a</tag> qui suivent directement un <tag>div</tag>'
     ],
     boardMarkup : `
     <bento>
@@ -269,6 +270,7 @@ var levels = [
     <pomme class="small"/>
     `
   },
+  // 12
   {
     selectorName: "General Sibling Selector",
     helpTitle: "Select éléments that follows another element",
