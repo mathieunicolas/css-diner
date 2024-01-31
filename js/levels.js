@@ -4,7 +4,7 @@ var levels = [
   {
     helpTitle : "Sélectionner les éléments par leur type",
     selectorName : "Sélecteur de type",
-    doThis : "Sélectionnes les assiettes",
+    doThis : "Sélectionne les assiettes",
     selector : "assiette",
     syntax : "A",
     help : "Sélectionne tous les éléments du type <strong>A</strong>. Le type fait référence au type de la balise, donc <tag>div</tag>, <tag>p</tag> et <tag>ul</tag> sont trois types d'éléments différents.",
@@ -20,7 +20,7 @@ var levels = [
 
   // 2
   {
-    doThis : "Sélectionnes les boîtes à bento",
+    doThis : "Sélectionne les boîtes à bento",
     selector : "bento",
     syntax : "A",
     helpTitle : "Sélectionner les éléments par leur type",
@@ -39,12 +39,12 @@ var levels = [
 
   // 3
   {
-    doThis : "Sélectionnes l'assiette colorée",
+    doThis : "Sélectionne l'assiette colorée",
     selector : "#coloree",
     selectorName: "Le sélecteur #ID",
     helpTitle: "Sélectionner un élément par son ID",
     syntax: "#id",
-    help : "Sélectionnes un élement avec un <strong>id</strong> spécifique. Tu peux aussi combiner le sélecteur ID avec le sélecteur de type.",
+    help : "Sélectionne un élement avec un <strong>id</strong> spécifique. Tu peux aussi combiner le sélecteur ID avec le sélecteur de type.",
     examples : [
       `<strong>#cool</strong> sélectionne l'élément <strong>id="cool"</strong>`,
       `<strong>ul#long</strong> sélectionne l'élément <tag>ul id="long"</tag>`,
@@ -58,15 +58,15 @@ var levels = [
 
   // 4
   {
-    helpTitle: "Sélectionnes un élément qui est sur un autre élément",
+    helpTitle: "Sélectionne un élément qui est sur un autre élément",
     selectorName : "Les sélecteurs descendants",
-    doThis : "Sélectionnes la pomme sur l'assiette",
+    doThis : "Sélectionne la pomme sur l'assiette",
     selector : "assiette pomme",
     syntax: "A&nbsp;&nbsp;B",
-    help : "sélectionnes tous <strong>B</strong> qui est sur <strong>A</strong>. <strong>B</strong> est appelé un descendant car il est dans un autre élement <strong>A</strong>.",
+    help : "sélectionne tout <strong>B</strong> qui est sur <strong>A</strong>. <strong>B</strong> est appelé un descendant car il est dans un autre élement <strong>A</strong>.",
     examples : [
-      '<strong>p&nbsp;&nbsp;strong</strong> sélectionnes tous les éléments <tag>strong</tag>qui sont dans tous les éléments <tag>p</tag>',
-      `<strong>#coloree&nbsp;&nbsp;span</strong> sélectionnes tous les éléments <tag>span</tag> qui sont dans l'élément <strong>id="coloree"</strong>`,
+      '<strong>p&nbsp;&nbsp;strong</strong> sélectionne tous les éléments <tag>strong</tag>qui sont dans tous les éléments <tag>p</tag>',
+      `<strong>#coloree&nbsp;&nbsp;span</strong> sélectionne tous les éléments <tag>span</tag> qui sont dans l'élément <strong>id="coloree"</strong>`,
     ],
     boardMarkup : `
     <bento/>
@@ -79,7 +79,7 @@ var levels = [
 
   // 5
   {
-    doThis : "Sélectionnes le cornichon dans l'assiette colorée",
+    doThis : "Sélectionne le cornichon dans l'assiette colorée",
     selector : "#coloree cornichon",
     helpTitle: "Combiner les sélecteurs descendants et les #ID",
     syntax: "#id&nbsp;&nbsp;A",
@@ -102,7 +102,7 @@ var levels = [
 
   // 6
   {
-    doThis : "Sélectionnes les petites pommes",
+    doThis : "Sélectionne les petites pommes",
     selector : ".small",
     selectorName: "Les sélecteurs de classes",
     helpTitle: "Sélectionner un élément grâce à sa classe",
@@ -123,9 +123,9 @@ var levels = [
 
   // 7
   {
-    doThis : "Sélectionnes les petites oranges",
+    doThis : "Sélectionne les petites oranges",
     selector : "orange.small",
-    helpTitle: "Combines plusieurs sélecteurs CSS !",
+    helpTitle: "Combine plusieurs sélecteurs CSS !",
     syntax: "A.nomdelaclasse",
     help : "Tu peux combiner le sélecteur de classe avec d’autres sélecteurs, comme le sélecteur de type.",
     examples : [
@@ -148,11 +148,11 @@ var levels = [
 
   // 8
   {
-    doThis : "Sélectionnes les petites oranges dans les bentos",
+    doThis : "Sélectionne les petites oranges dans les bentos",
     selector : "bento orange.small",
-    syntax: "Utilises ce que tu as déjà vu !",
+    syntax: "Utilise ce que tu as déjà vu !",
     helpTitle: "Tu peux le faire !",
-    help : "Combines ce que tu as appris dans les derniers niveaux pour résoudre celui-ci !",
+    help : "Combine ce que tu as appris dans les derniers niveaux pour résoudre celui-ci !",
     boardMarkup : `
     <bento>
       <orange/>
@@ -172,10 +172,10 @@ var levels = [
 
   // 9
   {
-    doThis : "Sélectionnes toutes les assiettes et tous les bentos",
+    doThis : "Sélectionne toutes les assiettes et tous les bentos",
     selector : "assiette,bento",
     selectorName : "Combiner avec une virgule",
-    helpTitle: "Combines les sélecteurs grâce à la virgule !",
+    helpTitle: "Combine les sélecteurs grâce à la virgule !",
     syntax : "A, B",
     help : "Grâce à la technologie Shatner, ce système sélectionne tous les éléments <strong>A</strong> et <strong>B</strong>. Vous pouvez combiner n’importe quel sélecteur de cette façon, et vous pouvez en spécifier plus de deux.",
     examples: [
@@ -253,7 +253,7 @@ var levels = [
     helpTitle: "Sélectionne les éléments qui suivent immédiatement un autre élément",
     selectorName: "Sélecteur de voisin direct",
     syntax : "A + B",
-    help : "Sélectionne tous les éléments <strong>B</strong> qui suivent immédiatement <strong>A</strong>. les éléments qui se suivent sont appelés éléments frères. Ils sont au même niveau, ou à la même profondeur. <br/><br/>In the HTML markup for this level, éléments that have the same indentation are siblings.",
+    help : "Sélectionne tous les éléments <strong>B</strong> qui suivent immédiatement <strong>A</strong>. Les éléments qui se suivent sont appelés éléments frères. Ils sont au même niveau, ou à la même profondeur. <br/><br/>Dans le code HTML de ce niveau, les éléments qui ont la même indentation sont de même branche." 
     examples : [
       '<strong>p + .intro</strong> sélectionne tous les éléments avec <strong>class="intro"</strong> qui suivent directement un <tag>p</tag>',
       '<strong>div + a</strong> sélectionne tous les éléments <tag>a</tag> qui suivent directement un <tag>div</tag>'
