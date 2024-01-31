@@ -253,7 +253,7 @@ var levels = [
     helpTitle: "Sélectionne les éléments qui suivent immédiatement un autre élément",
     selectorName: "Sélecteur de voisin direct",
     syntax : "A + B",
-    help : "Sélectionne tous les éléments <strong>B</strong> qui suivent immédiatement <strong>A</strong>. Les éléments qui se suivent sont appelés éléments frères. Ils sont au même niveau, ou à la même profondeur. <br/><br/>Dans le code HTML de ce niveau, les éléments qui ont la même indentation sont de même branche." 
+    help : "Sélectionne tous les éléments <strong>B</strong> qui suivent immédiatement <strong>A</strong>. Les éléments qui se suivent sont appelés éléments frères. Ils sont au même niveau, ou à la même profondeur. <br/><br/>Dans le code HTML de ce niveau, les éléments qui ont la même indentation sont de même branche.", 
     examples : [
       '<strong>p + .intro</strong> sélectionne tous les éléments avec <strong>class="intro"</strong> qui suivent directement un <tag>p</tag>',
       '<strong>div + a</strong> sélectionne tous les éléments <tag>a</tag> qui suivent directement un <tag>div</tag>'
