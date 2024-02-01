@@ -326,8 +326,8 @@ var levels = [
     selectorName: "First Child Pseudo-selector",
     helpTitle: "Selectionne le premier descendant qui est dans un autre élément",
     doThis : "Selectionne l'orange qui est au dessus ",
-    selector : "assiette :premier-descendant",
-    syntax: ":premier-descendant",
+    selector : "assiette :first-child",
+    syntax: ":first-child",
 
     help : "Tu peux selectionner le premier descendant. Un élément descendant est un élément qui est directement dans un autre élément. Tu peux combiner ce pseudo-selector avec d'autres selecteurs.",
     examples : [
