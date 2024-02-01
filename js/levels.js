@@ -303,7 +303,7 @@ var levels = [
     doThis : "Selectionne la pomme directement sur une assiette",
     selector : "assiette > pomme",
     helpTitle: "Selectionne le descendant direct d'un élément",
-    help : "Tu peux sélectionner directement les éléments qui sont les descendant d'autres éléments. A child element is any element that is nested directly dans un autre élément. <br><br>éléments qui sont nested deeper than qui sont called descendant éléments.",
+    help : "Tu peux sélectionner directement les éléments qui sont les descendant d'autres éléments. Un any element that is nested directly dans un autre élément. <br><br>éléments qui sont nested deeper than qui sont called descendant éléments.",
     examples : [
       '<strong>A > B</strong> sélectionne tous <strong>B</strong> qui sont a direct descendants <strong>A</strong>'
     ],
@@ -324,16 +324,16 @@ var levels = [
   //14
   {
     selectorName: "First Child Pseudo-selector",
-    helpTitle: "Select a first child element inside of another element",
-    doThis : "Select the top orange",
-    selector : "assiette :first-child",
-    syntax: ":first-child",
+    helpTitle: "Selectionne le premier descendant qui est dans un autre élément",
+    doThis : "Selectionne l'orange qui est au dessus ",
+    selector : "assiette :premier-descendant",
+    syntax: ":premier-descendant",
 
-    help : "Tu peux select the first child element. A child element is any element that is directly nested dans un autre élément. Tu peux combine this pseudo-selector with other selectors.",
+    help : "Tu peux selectionner le premier descendant. Un élément descendant est un élément qui est directement dans un autre élément. Tu peux combiner ce pseudo-selector avec d'autres selecteurs.",
     examples : [
-      '<strong>:first-child</strong> sélectionne tous first child éléments.',
-      '<strong>p:first-child</strong> sélectionne tous first child <tag>p</tag> éléments.',
-      '<strong>div p:first-child</strong> sélectionne tous first child <tag>p</tag> éléments qui sont in a <tag>div</tag>.'
+      '<strong>:first-child</strong> sélectionne tous premiers descendantséléments.',
+      '<strong>p:first-child</strong> sélectionne tous premiers descendants <tag>p</tag> éléments.',
+      '<strong>div p:first-child</strong> sélectionne tous les premiers descendants <tag>p</tag> éléments qui sont dans une <tag>div</tag>.'
     ],
     boardMarkup :`
     <bento/>
