@@ -272,14 +272,14 @@ var levels = [
   },
   // 12
   {
-    selectorName: "General Sibling Selector",
-    helpTitle: "Select éléments that follows another element",
+    selectorName: "Selecteur Général d'adjacents",
+    helpTitle: "Selectionne les éléments qui suivent un autre élement",
     syntax: "A ~ B",
-    doThis : "Select the cornichons beside the bento",
+    doThis : "Selectionne les cornichons à côté de la boîte à Bento",
     selector : "bento ~ cornichon",
-    help : "You can select all siblings of an element that follow it. This is like the Adjacent Selector (A + B) except it gets all of the following éléments instead of one.",
+    help :"Tu peux selectionner tout les adjacents d'un élement qui se suivent. C'est comme le selecteur adjacent (A+B) mis à part le fait qu'il selectionne tout les élements suivant au lieu d'un.",
     examples : [
-      '<strong>A ~ B</strong> sélectionne tous <strong>B</strong> that follow a <strong>A</strong>'
+      '<strong>A ~ B</strong> sélectionne tous <strong>B</strong> qui suivent un <strong>A</strong>'
     ],
     boardMarkup : `
     <cornichon/>
@@ -296,15 +296,16 @@ var levels = [
     </assiette>
     `
   },
+  //13
   {
-    selectorName: "Child Selector",
+    selectorName: "Sélecteur de descendant",
     syntax: "A > B&nbsp;",
-    doThis : "Select the pomme directly on a assiette",
+    doThis : "Selectionne la pomme directement sur une assiette",
     selector : "assiette > pomme",
-    helpTitle: "Select direct children of an element",
-    help : "You can select éléments that are direct children of other éléments. A child element is any element that is nested directly in another element. <br><br>éléments that are nested deeper than that are called descendant éléments.",
+    helpTitle: "Selectionne le descendant direct d'un élément",
+    help : "Tu peux sélectionner directement les éléments qui sont les descendant d'autres éléments. A child element is any element that is nested directly dans un autre élément. <br><br>éléments qui sont nested deeper than qui sont called descendant éléments.",
     examples : [
-      '<strong>A > B</strong> sélectionne tous <strong>B</strong> that are a direct children <strong>A</strong>'
+      '<strong>A > B</strong> sélectionne tous <strong>B</strong> qui sont a direct descendants <strong>A</strong>'
     ],
     boardMarkup: `
     <assiette>
@@ -320,6 +321,7 @@ var levels = [
     <pomme class="small"/>
     `
   },
+  //14
   {
     selectorName: "First Child Pseudo-selector",
     helpTitle: "Select a first child element inside of another element",
@@ -327,11 +329,11 @@ var levels = [
     selector : "assiette :first-child",
     syntax: ":first-child",
 
-    help : "You can select the first child element. A child element is any element that is directly nested in another element. You can combine this pseudo-selector with other selectors.",
+    help : "Tu peux select the first child element. A child element is any element that is directly nested dans un autre élément. Tu peux combine this pseudo-selector with other selectors.",
     examples : [
       '<strong>:first-child</strong> sélectionne tous first child éléments.',
       '<strong>p:first-child</strong> sélectionne tous first child <tag>p</tag> éléments.',
-      '<strong>div p:first-child</strong> sélectionne tous first child <tag>p</tag> éléments that are in a <tag>div</tag>.'
+      '<strong>div p:first-child</strong> sélectionne tous first child <tag>p</tag> éléments qui sont in a <tag>div</tag>.'
     ],
     boardMarkup :`
     <bento/>
@@ -344,16 +346,17 @@ var levels = [
     <cornichon class="small" />
     `
   },
+  //15
   {
     selectorName: "Only Child Pseudo-selector",
-    helpTitle: "Select an element that are the only element inside of another one.",
+    helpTitle: "Select an element qui sont the only element inside of another one.",
     doThis : "Select the pomme and the cornichon on the assiettes",
     selector : "assiette :only-child",
     syntax: ":only-child",
-    help : "You can select any element that is the only element inside of another one.",
+    help : "Tu peux select any element that is the only element inside of another one.",
     examples : [
-      '<strong>span:only-child</strong> selects the <tag>span</tag> éléments that are the only child of some other element.',
-      '<strong>ul li:only-child</strong> selects the only <tag>li</tag> element that are in a <tag>ul</tag>.'
+      '<strong>span:only-child</strong> selects the <tag>span</tag> éléments qui sont the only child of some other element.',
+      '<strong>ul li:only-child</strong> selects the only <tag>li</tag> element qui sont in a <tag>ul</tag>.'
     ],
     boardMarkup : `
     <assiette>
@@ -372,13 +375,14 @@ var levels = [
     <cornichon class="small"/>
     `
   },
+  //16
   {
     selectorName: "Last Child Pseudo-selector",
     helpTitle: "Select the last element inside of another element",
     doThis : "Select the small pomme and the cornichon",
     selector : ".small:last-child",
     syntax: ":last-child",
-    help : "You can use this selector to select an element that is the last child element inside of another element. <br><br>Pro Tip &rarr; In cases where there is only one element, that element counts as the first-child, only-child and last-child!",
+    help : "Tu peux use this selector to select an element that is the last child element inside of another element. <br><br>Pro Tip &rarr; In cases where there is only one element, that element counts as the first-child, only-child and last-child!",
     examples : [
       '<strong>:last-child</strong> sélectionne tous last-child éléments.',
       '<strong>span:last-child</strong> sélectionne tous last-child <tag>span</tag> éléments.',
@@ -395,13 +399,14 @@ var levels = [
     </assiette>
     <cornichon class="small"/>`
   },
+  //17
   {
     selectorName: "Nth Child Pseudo-selector",
-    helpTitle: "Select an element by its order in another element",
+    helpTitle: "Select an element by its order dans un autre élément",
     doThis : "Select the 3rd assiette",
     selector : ":nth-child(3)",
     syntax: ":nth-child(A)",
-    help : "Selects the <strong>nth</strong> (Ex: 1st, 3rd, 12th etc.) child element in another element.",
+    help : "Selects the <strong>nth</strong> (Ex: 1st, 3rd, 12th etc.) child element dans un autre élément.",
     examples : [
       '<strong>:nth-child(8)</strong> selects every element that is the 8th child of another element.',
       '<strong>div p:nth-child(2)</strong> selects the second <strong>p</strong> in every <strong>div</strong>',
@@ -413,13 +418,14 @@ var levels = [
     <assiette id="coloree"/>
     `
   },
+  //18
   {
     selectorName: "Nth Last Child Selector",
-    helpTitle: "Select an element by its order in another element, counting from the back",
+    helpTitle: "Select an element by its order dans un autre élément, counting from the back",
     doThis : "Select the 1st bento",
     selector : "bento:nth-last-child(3)",
     syntax: ":nth-last-child(A)",
-    help : "Selects the children from the bottom of the parent. This is like nth-child, but counting from the back!",
+    help : "Selects the descendants from the bottom of the parent. This is like nth-child, but counting from the back!",
     examples : [
       '<strong>:nth-last-child(2)</strong> sélectionne tous second-to-last child éléments.'
     ],
@@ -440,7 +446,7 @@ var levels = [
     doThis : "Select first pomme",
     selector : "pomme:first-of-type",
     syntax: ":first-of-type",
-    help : "Selects the first element of that type within another element.",
+    help : "Selects the first element of that type withdans un autre élément.",
     examples : [
       '<strong>span:first-of-type</strong> selects the first <tag>span</tag> in any element.'
     ],
@@ -461,7 +467,7 @@ var levels = [
     doThis: "Select all even assiettes",
     selector: "assiette:nth-of-type(even)",
     syntax: ":nth-of-type(A)",
-    help: "Selects a specific element based on its type and order in another element - or even or odd instances of that element.",
+    help: "Selects a specific element based on its type and order dans un autre élément - or even or odd instances of that element.",
     examples: [
       '<strong>div:nth-of-type(2)</strong> selects the second instance of a div.',
       '<strong>.example:nth-of-type(odd)</strong> sélectionne tous odd instances of a the example class.'
@@ -501,11 +507,11 @@ var levels = [
   },
   {
     selectorName: "Only of Type Selector",
-    helpTitle: "Select éléments that are the only ones of their type within their parent element",
+    helpTitle: "Select éléments qui sont the only ones of their type within their parent element",
     selector : "pomme:only-of-type",
     syntax: ":only-of-type",
     doThis : "Select the pomme on the middle assiette",
-    help : "Selects the only element of its type within another element.",
+    help : "Selects the only element of its type withdans un autre élément.",
     examples : [
       '<strong>p span:only-of-type</strong> selects a <tag>span</tag> within any <tag>p</tag> if it is the only <tag>span</tag> in there.'
     ],
@@ -528,7 +534,7 @@ var levels = [
     doThis : "Select the last pomme and orange",
     selector : ".small:last-of-type",
     syntax: ":last-of-type",
-    help : "Selects each last element of that type within another element. Remember type refers the kind of tag, so <tag>p</tag> and <tag>span</tag> are different types. <br><br> I wonder if this is how the last dinosaur was selected before it went extinct.",
+    help : "Selects each last element of that type withdans un autre élément. Remember type refers the kind of tag, so <tag>p</tag> and <tag>span</tag> are different types. <br><br> I wonder if this is how the last dinosaur was selected before it went extinct.",
     examples : [
       '<strong>div:last-of-type</strong> selects the last <tag>div</tag> in every element.',
       '<strong>p span:last-of-type</strong> selects the last <tag>span</tag> in every <tag>p</tag>.'
@@ -544,7 +550,7 @@ var levels = [
   },
   {
     selectorName: "Empty Selector",
-    helpTitle: "Select éléments that don't have children",
+    helpTitle: "Select éléments that don't have descendants",
     doThis : "Select the empty bentos",
     selector : "bento:empty",
     syntax: ":empty",
@@ -566,7 +572,7 @@ var levels = [
     doThis : "Select the big pommes",
     selector : "pomme:not(.small)",
     syntax: ":not(X)",
-    help : 'You can use this to select all éléments that do not match selector <strong>"X"</strong>.',
+    help : 'Tu peux use this to select all éléments that do not match selector <strong>"X"</strong>.',
     examples : [
       '<strong>:not(#coloree)</strong> sélectionne tous éléments that do not have <strong>id="coloree"</strong>.',
       '<strong>div:not(:first-child)</strong> selects every <tag>div</tag> that is not a first child.',
@@ -646,7 +652,7 @@ var levels = [
     doThis : "Select the items for names that start with 'Sa'",
     selector : '[for^="Sa"]',
     syntax: '[attribute^="value"]',
-    // help : "You can use quotes around the value in the selector, or not&mdash;it's optional!",
+    // help : "Tu peux use quotes around the value in the selector, or not&mdash;it's optional!",
     examples : [
       '<strong>.toy[category^="Swim"]</strong> selects éléments with class <strong>toy</strong> and either <strong>category="Swimwear"</strong> or <strong>category="Swimming"</strong>.'
     ],
@@ -680,7 +686,7 @@ var levels = [
     syntax: '[attribute*="value"]',
     doThis : "Select the meals for names that contain 'obb'",
     selector : '[for*="obb"]',
-    help : 'A useful selector if you can identify a common pattern in things like <strong>class</strong>, <strong>href</strong> or <strong>src</strong> attributes.',
+    help : 'A useful selector if Tu peux identify a common pattern in things like <strong>class</strong>, <strong>href</strong> or <strong>src</strong> attributes.',
     examples : [
       '<strong>img[src*="/thumbnails/"]</strong> sélectionne tous image éléments that show images from the "thumbnails" folder.',
       '<strong>[class*="heading"]</strong> sélectionne tous éléments with "heading" in their class, like <strong>class="main-heading"</strong> and <strong>class="sub-heading"</strong>'
