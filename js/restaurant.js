@@ -29,7 +29,7 @@ var progress = JSON.parse(localStorage.getItem("progress")) || blankProgress;
 
 $(document).ready(function(){
 
-  $(".share-menu").on("click","a",function()))};
+  $(".share-menu").on("click","a",function());
   
   $(window).on("keydown",function(e){
     if(e.keyCode == 27) {
