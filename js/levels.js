@@ -298,14 +298,14 @@ var levels = [
   },
   //13
   {
-    selectorName: "Sélecteur de descendant",
+    selectorName: "Sélecteur d'enfant",
     syntax: "A > B&nbsp;",
     doThis : "Selectionne la pomme directement sur une assiette",
     selector : "assiette > pomme",
-    helpTitle: "Selectionne le descendant direct d'un élément",
-    help : "Tu peux sélectionner directement les éléments qui sont les descendant d'autres éléments. Un any element that is nested directly dans un autre élément. <br><br>éléments qui sont nested deeper than qui sont called descendant éléments.",
+    helpTitle: "Selectionne l'enfant direct d'un élément",
+    help : "Tu peux sélectionner directement les éléments qui sont les enfants d'autres éléments. Les elements enfants sont tous les éléments qui sont compris dans un autre élément. <br><br>Les éléments qui sont inclus plus profondement que les éléments enfants sont appelés éléments descendants.",
     examples : [
-      '<strong>A > B</strong> sélectionne tous <strong>B</strong> qui sont a direct descendants <strong>A</strong>'
+      '<strong>A > B</strong> sélectionne tous <strong>B</strong> qui sont des éléments enfants direct <strong>A</strong>'
     ],
     boardMarkup: `
     <assiette>
